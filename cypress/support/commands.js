@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Based on product name the function should be able to add the product in to the cart
+Cypress.Commands.add("addProductToCartByName", (nameOfPrduct) => {
+  cy.get("h4 a").each((el, index, list) => {
+    let productName = el.text();
+    if (productName.includes(nameOfPrduct)) {
+      cy.get(".btn.btn-info").eq(index).click();
+    }
+  });
+});
