@@ -12,7 +12,7 @@ describe("Data driven test", () => {
     // open the url
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     // go to the shop page
-    cy.contains("Shop").click();
+    cy.contains("").click();
 
     // based on product name click on the add to cart button.
     // reffer command.js for below method 'addProductToCartByName'
