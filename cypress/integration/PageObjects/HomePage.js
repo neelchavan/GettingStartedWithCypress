@@ -15,12 +15,20 @@ class HomePage {
     return cy.get("#exampleCheck1");
   }
 
+  getSelectDropdown() {
+    return cy.get("select");
+  }
+
   getEmployedRadioButton() {
     return cy.get("[value='option2']");
   }
 
   getSubmitButton() {
     return cy.get("[value='Submit']");
+  }
+
+  getDatePicker() {
+    return cy.get("[type='date']");
   }
 }
 
