@@ -12,12 +12,18 @@ describe("Data driven test", () => {
     // open the url
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     // go to the shop page
-    cy.contains("").click();
+    cy.contains("Shop").click();
 
     // based on product name click on the add to cart button.
     // reffer command.js for below method 'addProductToCartByName'
     this.data.productNames.forEach((ele) => {
+      cy.log(ele);
       cy.addProductToCartByName(ele);
     });
+
+    // looping through json
+    for (let x in this.data) {
+      cy.log(x);
+    }
   });
 });
