@@ -3,7 +3,7 @@ import HomePage from "../PageObjects/HomePage";
 
 describe("First test via page object model", () => {
   before(function () {
-    cy.visit("https:///rahulshettyacademy.com/angularpractice/");
+    cy.visit(Cypress.env("baseUrl"));
   });
 
   it("This is HomePage test", () => {
