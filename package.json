@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx D:/Neel/VsCodeWorkspace/Cypress/ProjectOne/node_modules/.bin/cypress run",
+    "testHeaded": "npx D:/Neel/VsCodeWorkspace/Cypress/ProjectOne/node_modules/.bin/cypress run --headed",
+    "testHeadedChrome": "npx D:/Neel/VsCodeWorkspace/Cypress/ProjectOne/node_modules/.bin/cypress run --headed --browser=chrome"
   },
   "author": "",
   "license": "ISC",
