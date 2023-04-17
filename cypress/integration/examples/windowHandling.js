@@ -8,7 +8,7 @@ describe("working with window handling", () => {
     // below step opens the new tab in the same page
     cy.get("#opentab").invoke("removeAttr", "target").click();
     // assert if we have moved to the new page
-    cy.url().should("include", "rahulshetty");
+    cy.url().should("include", "qaclickacademy");
     // navigate to the back page
     cy.go("back");
     cy.url().should("include", "Automation");

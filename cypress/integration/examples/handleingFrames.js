@@ -13,6 +13,10 @@ describe("Handeling iframes in cypress", () => {
     cy.iframe().find(".pricing-title").as("pricing-title");
     cy.iframe().get("@pricing-title").should("have.length", 2);
     cy.iframe().find(".bg-pattern-1");
-    cy.url().should("include", "Automation");
+    cy.get("#courses-iframe").should(
+      "have.attr",
+      "src",
+      "https://www.rahulshettyacademy.com/"
+    );
   });
 });
