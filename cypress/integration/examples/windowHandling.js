@@ -6,10 +6,11 @@ describe("working with window handling", () => {
     // in cypress we can work on child window if we remove the 'target' attributes.
     // below step opens the new tab in the same page
     cy.get("#opentab").invoke("removeAttr", "target").click();
-    // assert if we have moved to the new page
-    cy.url().should("include", "qaclickacademy");
-    // navigate to the back page
-    cy.go("back");
+    cy.origin("https://www.qaclickacademy.com/", () => {
+      // assert if we have moved to the new page
+      cy.url().should("include", "qaclickacademy");
+    });
+    cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     // assert we have navigated back to the home page
     cy.url().should("include", "Automation");
   });
