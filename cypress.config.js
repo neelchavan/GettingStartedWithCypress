@@ -12,5 +12,6 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on); // for html reports
     },
     specPattern: "cypress/integration/examples/*.js",
+    chromeWebSecurity: false,
   },
 });

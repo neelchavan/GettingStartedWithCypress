@@ -7,7 +7,8 @@
     "test": "npx D:/Neel/VsCodeWorkspace/Cypress/ProjectOne/node_modules/.bin/cypress run",
     "testHeaded": "npm run test -- --headed",
     "testHeadedChrome": "npm run test -- --headed --browser=chrome",
-    "testHeadedFirefox": "npm run test -- --headed --browser=firefox"
+    "testHeadedFirefox": "npm run test -- --headed --browser=firefox",
+    "open": "npx cypress open"
   },
   "author": "",
   "license": "ISC",
